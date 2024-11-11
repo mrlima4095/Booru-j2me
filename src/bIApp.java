@@ -192,7 +192,7 @@ public class bIApp extends MIDlet implements Runnable, CommandListener, ItemComm
 			useProxy = j.getBoolean("useProxy", useProxy);
 		} catch (Exception e) {}
 		
-		Form f = new Form("ы");
+		Form f = new Form("Booru J2ME");
 		f.addCommand(exitCmd);
 		f.addCommand(settingsCmd);
 		f.addCommand(aboutCmd);
@@ -205,7 +205,7 @@ public class bIApp extends MIDlet implements Runnable, CommandListener, ItemComm
 		s.setLayout(Item.LAYOUT_CENTER | Item.LAYOUT_NEWLINE_AFTER);
 		f.append(mainLabel = s);
 		
-		searchField = new TextField("Tags", "", 200, TextField.NON_PREDICTIVE);
+		searchField = new TextField("Tags", "", 256, TextField.NON_PREDICTIVE);
 		f.append(searchField);
 		
 		s = new StringItem(null, "Search", StringItem.BUTTON);
